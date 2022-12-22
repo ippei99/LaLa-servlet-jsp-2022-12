@@ -1,0 +1,32 @@
+
+プロジェクト名 alchole
+
+http://localhost:8080/alchole/ask
+にアクセスする。
+
++-----------------------+
+|  名前:_____________   |
+|  年齢:_____________   |
+|                       |
+|             [送信]    |
++-----------------------+
+
+
+20才未満なら、「（名前）さんはお酒を飲めません」
+それ以外なら、「（名前）さん、飲み過ぎに注意しましょう」
+と返答が返ってくる。
+
+作成するファイルは、
+GetAgeServlet.java (servletぱっけーじ)
+/WEB-INF/jsp/question.jsp
+/WEB-INF/jsp/result.jsp
+の3つ。
+
+ユーザーの情報は User.java というJavaBeansに入れる。
+ユーザーへの返答も User.java に入れる。
+(modelパッケージ)
+
+ユーザーの年齢による返答の選択処理は、
+GetAgeLogic.java というクラスの(modelパッケージ)
+execute(User user)メソッドで
+おこなう。
