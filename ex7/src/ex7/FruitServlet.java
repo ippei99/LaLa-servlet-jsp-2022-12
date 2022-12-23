@@ -3,6 +3,7 @@ package ex7;
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,11 +20,26 @@ public class FruitServlet extends HttpServlet {
 			throws ServletException, IOException {
 		
 		Fruit fruit = new Fruit("いちご", 700);
-		request.setAttribute("fruit", fruit);
-		String url = "/WEB-INF/ex/fruit.jsp";
 		
+		// リクエストスコープの場合
+//		request.setAttribute("fruit", fruit);
+		
+		// セッションスコープの場合
+//		HttpSession session = request.getSession();
+//		session.setAttribute("fruit", fruit);
+		
+		// ID表示
+//		String sessionId = session.getId();
+//		session.setAttribute("sessionId", sessionId);
+		
+		//　アプリケーションスコープの場合
+		ServletContext application = this.getServletContext();
+		application.setAttribute("fruit", fruit);
+		
+		String url = "/WEB-INF/ex/fruit.jsp";
 		RequestDispatcher d = request.getRequestDispatcher(url);
 		d.forward(request, response);
+		
 
 	}
 

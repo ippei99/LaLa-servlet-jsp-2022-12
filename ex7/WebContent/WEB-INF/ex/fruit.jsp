@@ -2,7 +2,16 @@
     pageEncoding="UTF-8"%>
 <%@ page import="ex7.Fruit" %>
 <%
-Fruit fruit = (Fruit)request.getAttribute("fruit");
+// リクエストスコープ時
+// Fruit fruit = (Fruit)request.getAttribute("fruit");
+
+// セッションスコープ時
+// Fruit fruit = (Fruit)session.getAttribute("fruit");
+// String sessionId = (String)session.getAttribute("sessionId");
+
+// アプリケーションスコープ時
+Fruit fruit = (Fruit)application.getAttribute("fruit");
+
 %>
 <!DOCTYPE html>
 <html>
