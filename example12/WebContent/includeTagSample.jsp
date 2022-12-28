@@ -4,12 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>インクルードのサンプル</title>
 </head>
 <body>
-	<p>
-		${applicationScope.fruit.name}の値段は
-		${applicationScope.fruit.price}円です。
-	</p>
+	<h1>どこつぶへようこそ</h1>
+	<p>「どこつぶ」は・・・</p>
+	<jsp:include page ="/footer.jsp" />
 </body>
 </html>
