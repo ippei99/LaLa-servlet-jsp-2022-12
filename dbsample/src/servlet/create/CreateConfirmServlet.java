@@ -31,8 +31,8 @@ public class CreateConfirmServlet extends HttpServlet {
 		
 		// empビーンズを使って、入力チェック。
 		List<MyError> errorList = new ArrayList<>();
-		ParamCheck paramCheck = new ParamCheck();
-		paramCheck.validate(emp, errorList);
+		ParamCheck paramCheck = new ParamCheck(errorList);
+		paramCheck.validate(emp);
 		
 		request.setAttribute("emp", emp);
 		String url = "";

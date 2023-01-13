@@ -21,5 +21,17 @@ public class MyTool {
 		Employee emp = new Employee(id, name, gender, birthday, dept);
 		return emp;
 	}
+	
+	public int parseInt(String numTxt) {
+		int value = 0;
+		try {
+			value = Integer.parseInt(numTxt);
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+			value = -1;
+		}
+		
+		return value;
+	}
 
 }
