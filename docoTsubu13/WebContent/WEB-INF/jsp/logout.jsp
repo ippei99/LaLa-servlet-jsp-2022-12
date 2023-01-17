@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>どこつぶ</title>
+<title>ゲットエレメントヒーローズch</title>
 </head>
 <body>
-  <h1>どこつぶログアウト</h1>
+  <h1>ゲットエレメントヒーローズch<br>ログアウト</h1>
   <p>ログアウトしました</p>
   <a href="/docoTsubu13/">トップへ</a>
 </body>

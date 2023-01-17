@@ -8,10 +8,10 @@ User loginUser = (User) session.getAttribute("loginUser");
 <html>
 <head>
 <meta charset="UTF-8">
-<title>どこつぶ</title>
+<title>ゲットエレメントヒーローズch</title>
 </head>
 <body>
-	<h1>どこつぶログイン</h1>
+	<h1>chログイン</h1>
 	<% if (loginUser != null){ %>
 		<p>ログインに成功しました</p>
 		<p>ようこそ<%= loginUser.getName() %>>さん</p>

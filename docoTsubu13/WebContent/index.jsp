@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>どこつぶ</title>
+<title>ゲットエレメントヒーローズch</title>
 </head>
 <body>
-	<h1>どこつぶへようこそ</h1>
+	<h1>ゲットエレメントヒーローズchへ<br>ようこそ</h1>
 	<form action="/docoTsubu13/Login" method="post">
 	ユーザー名：<input type="text" name="name"><br>
 	パスワード：<input type="password" name="pass"><br>

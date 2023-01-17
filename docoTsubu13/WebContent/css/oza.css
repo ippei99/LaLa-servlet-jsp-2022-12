@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+body {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+body {
+  /* background-color: lightseagreen; */
+  background-image: url(../img/oza1.jpg);
+}
+
+#wrap {
+  width: 600px;
+  margin: 0 auto 0 auto;
+  background-color: #fff;
+  padding: 16px;
+
+}
+
+h1 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+nav {
+  width: 430px;
+  margin: 0 auto;
+}
+
+li {
+  margin-right: 10px;
+  padding: 10px 5px;
+}
+
+li:hover {
+  background-color: #ddd;
+}
+
+/* index.html */
+.bosyu {
+  vertical-align: top;
+  width: 64px;
+  display: inline-block;
+  text-align: right;
+}
+
+/* index.html */
+#btn {
+  width: 300px;
+  margin-left: 68px;
+}
+
+
+/* index.html */
+#bosyu,
+#url {
+  width: 300px;
+  height: 50px;
+}
+
+/* kuesuto.html */
+.q-box,
+.que-box {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 220px;
+}
+
+.q-box {
+  margin-bottom: 0;
+}
+
+.q-img {
+  width: 30%;
+  flex-basis: 15%;
+}
+
+.q-img img {
+  max-width: 100%;
+}
+
+.q-midashi {
+  width: 65%;
+  flex-basis: 70%;
+}
+
+/* kuesuto.html */
+/* contact.html */
+#contact #wrap {
+  /* height: 700px; */
+}
+
+/* furendo.html */
+#furendo {
+  width: 300px;
+  height: 60px;
+}
+
+/* contact.html */
+#toiawase {
+  width: 350px;
+  height: 60px;
+}
