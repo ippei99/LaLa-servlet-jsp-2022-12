@@ -18,10 +18,9 @@
 	    <h1>nyuuge-zya-改め<br>ゲットエレメントヒーローズch</h1>
 	    <nav>
 	      <ul>
-	        <li><a href="https://www.google.com">マルチ</a></li>
-	        <li><a href="https://www.google.com">クエスト適正</a></li>
-	        <li><a href="https://www.google.com">フレンド募集</a></li>
-	        <li><a href="https://www.google.com">お問い合わせ</a></li>
+	        <li><a href="/docoTsubu13/Main">マルチ</a></li>
+	        <li><a href="https://www.google.com">先生</a></li>
+	        <li><a href="/docoTsubu13/game">ゲットエレメントヒーローズ２体験版</a></li>
 	      </ul>
 	    </nav>
 	    
