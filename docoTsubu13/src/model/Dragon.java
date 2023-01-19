@@ -6,6 +6,6 @@ public class Dragon extends Monster {
 	}
 
 	public Dragon(String name) {
-		super(name, 650000000, 30);
+		super(name, 650000001, 30);
 	}
 }

@@ -6,6 +6,7 @@ public class Mutter implements Serializable {
 	private int id;
 	private String userName;
 	private String text;
+	private String fd;
 
 	public Mutter() {
 	}
@@ -15,14 +16,29 @@ public class Mutter implements Serializable {
 		this.text = text;
 	}
 	
+	
+	public Mutter(String userName, String text, String fd) {
+		this.userName = userName;
+		this.text = text;
+		this.fd = fd;
+	}
+	
 	public Mutter(int id, String userName, String text) {
 		this.id = id;
 		this.userName = userName;
 		this.text = text;
 	}
 	
+	public Mutter(int id, String userName, String text, String fd) {
+		this.id = id;
+		this.userName = userName;
+		this.text = text;
+		this.fd = fd;
+	}
+
+	
 	public String toString() {
-		return id + ": " + userName + ": " + text;
+		return fd + " " + id + ": " + userName + ": " + text;
 	}
 	
 	public int getId() {
@@ -35,6 +51,10 @@ public class Mutter implements Serializable {
 
 	public String getText() {
 		return text;
+	}
+
+	public String getFd() {
+		return fd;
 	}
 
 }

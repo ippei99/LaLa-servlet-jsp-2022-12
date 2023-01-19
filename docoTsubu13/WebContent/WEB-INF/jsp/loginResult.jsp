@@ -8,7 +8,7 @@ User loginUser = (User) session.getAttribute("loginUser");
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ゲットエレメントヒーローズch</title>
+<title>nyuuge-zya-（どこつぶ版）</title>
 </head>
 <body>
 	<h1>chログイン</h1>

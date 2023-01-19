@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ゲットエレメントヒーローズch</title>
+<title>nyuuge-zya-（どこつぶ版）</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/oza.css">
 </head>
@@ -15,12 +15,13 @@
     class="mce_SELRES_start"></span>
 
 	<div id="wrap">
-	    <h1>nyuuge-zya-改め<br>ゲットエレメントヒーローズch</h1>
+	    <h1>nyuuge-zya-（どこつぶ版）</h1>
 	    <nav>
 	      <ul>
 	        <li><a href="/docoTsubu13/Main">マルチ</a></li>
 	        <li><a href="https://www.google.com">先生</a></li>
-	        <li><a href="/docoTsubu13/game">ゲットエレメントヒーローズ２体験版</a></li>
+	        <li><a href="https://ja.wikipedia.org/wiki/%E5%B0%BE%E5%B4%8E%E4%B8%96%E7%95%8C%E8%A6%B3">世界観</a></li>
+	        <li><a href="/docoTsubu13/game">getElementHeroes2体験版</a></li>
 	      </ul>
 	    </nav>
 	    
@@ -31,11 +32,12 @@
 	    </article>
     
 		<section>
-	      <h1>くちこみ募集一覧</h1>
+	      <h1>つぶやき募集一覧</h1>
 	      <ol>
-	        <li>ファイナルファンタジー(中止)</li>
-	        <li>モンスターストライク（中止）</li>
-	        <li>ゲットエレメントヒーローズ（絶賛受付中）</li>
+	        <li>ファイナルファンタジー</li>
+	        <li>モンスターストライク</li>
+	        <li>ゲットエレメントヒーローズ</li>
+	        <li>授業でわからない事等</li>
 	      </ol>
 	   	</section>
 		</div>
@@ -45,17 +47,18 @@
 				<c:out value="${loginUser.name}" />さん、ログイン中
 			<a href="/docoTsubu13/Logout">ログアウト</a>
 			</p>
-			<p><a href="/docoTsubu13/Main">更新</a></p>
+			<p><a href="/docoTsubu13/Main">更新</a></p><br>
 			<form action="/docoTsubu13/Main" method="post">
 			<input type="text" name="text">
 			<input type="submit" value="つぶやく">
-			</form>
+			</form><br>
 			
 			<c:if test="${not empty errorMsg}">
 				<p style="color:red:">${errorMsg}</p>
 			</c:if>
 			<c:forEach var="mutter" items="${mutterList}">
 				<p>
+					<c:out value="${mutter.fd}" /> 
 					<c:out value="${mutter.userName}" />:
 					<c:out value="${mutter.text}" />
 				</p>

@@ -19,7 +19,7 @@ public class MutterDAO {
 		List<Mutter> mutterList = new ArrayList<>();
 		
 		try(Connection conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS)){
-			String sql = "SELECT id, name, text FROM mutter ORDER BY id DESC";
+			String sql = "SELECT id, name, text, date FROM mutter ORDER BY id DESC";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			ResultSet rs = pStmt.executeQuery();
 			
@@ -27,7 +27,8 @@ public class MutterDAO {
 				int id = rs.getInt("id");
 				String userName = rs.getString("name");
 				String text = rs.getString("text");
-				Mutter mutter = new Mutter(id, userName, text);
+				String fd = rs.getString("date");
+				Mutter mutter = new Mutter(id, userName, text, fd);
 				mutterList.add(mutter);
 			}
 			
@@ -41,11 +42,12 @@ public class MutterDAO {
 	public boolean create(Mutter mutter) {
 		try(Connection conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS)){
 			
-			String sql = "INSERT INTO MUTTER(NAME, TEXT) VALUES(?, ?)";
+			String sql = "INSERT INTO MUTTER(NAME, TEXT, DATE) VALUES(?, ?, ?)";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			
 			pStmt.setString(1, mutter.getUserName());
 			pStmt.setString(2, mutter.getText());
+			pStmt.setString(3, mutter.getFd());
 			
 			int result = pStmt.executeUpdate();
 			if(result != 1) {

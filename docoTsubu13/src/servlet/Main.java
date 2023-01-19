@@ -1,6 +1,8 @@
 package servlet;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -63,8 +65,14 @@ public class Main extends HttpServlet {
 
 			HttpSession session = request.getSession();
 			User loginUser = (User) session.getAttribute("loginUser");
+			
+			LocalDateTime d = LocalDateTime.now();
+			DateTimeFormatter dtf =
+					DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm");
+			String fd = dtf.format(d);
+//			System.out.println(fd);
 
-			Mutter mutter = new Mutter(loginUser.getName(), text);
+			Mutter mutter = new Mutter(loginUser.getName(), text, fd);
 			PostMutterLogic postMutterLogic = new PostMutterLogic();
 //			postMutterLogic.execute(mutter, mutterList);
 			postMutterLogic.execute(mutter);
